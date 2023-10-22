@@ -1,6 +1,7 @@
 package ie.atu.homeworklab1y4cicd;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,14 +10,11 @@ public class CalculatorController {
 
     @GetMapping("/calculate")
     public String calculate(
-            @RequestParam double num1,
-            @RequestParam double num2,
-            @RequestParam String operation
-            /*
             @PathVariable double num1,
-        @PathVariable double num2,
-        @PathVariable String operation
-             */
+            @PathVariable double num2,
+            @PathVariable String operation
+
+
     ) {
         double result;
 
